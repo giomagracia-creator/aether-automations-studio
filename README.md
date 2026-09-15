@@ -9,29 +9,25 @@ Built with **Next.js App Router**, **TypeScript**, **Tailwind CSS**, and **frame
 1. Hero — AI automations for inbox, websites, ops + CTA
 2. Services — Inbox automation / Animated live websites / Ops automations
 3. How it works — three steps
-4. Contact form — name, email, message (Formspree)
+4. Contact form — name, email, message (**demo — not wired**; client-only fake success)
 5. Footer — clearly labeled demo / placeholder
 
 ## Getting started
 
 ```bash
 npm install
-cp .env.example .env.local
-# set NEXT_PUBLIC_FORMSPREE_FORM_ID
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-`npm install` generates `package-lock.json` (see also `LOCKFILE.md` if you need an exact lock restore).
+No env vars are required for the contact form. Copying `.env.example` is optional.
 
-## Environment
+## Contact form (demo-only)
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `NEXT_PUBLIC_FORMSPREE_FORM_ID` | Yes (for form submit) | Formspree form ID. Without it, the contact section shows a clear "form needs configuration" message. |
+The contact UI looks complete but **does not submit to any email API** (no Formspree, no Resend). Submit shows a client-only “demo success” message so you can teach the flow without secrets.
 
-Create a form at [Formspree](https://formspree.io), then set forwarding so submissions go to **giomagracia@gmail.com**.
+Real email later: wire Formspree or Resend when ready. Until then, use **mailto:giomagracia@gmail.com**.
 
 `.env.example` is committed; do **not** commit `.env` / `.env.local` with secrets.
 
